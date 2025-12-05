@@ -1,0 +1,202 @@
+[
+  {
+    "id": "s1",
+    "title": "Modern React Patterns",
+    "speaker": "Danielle Cohen",
+    "track": "Frontend",
+    "startTime": "2025-05-20T09:00:00.000Z",
+    "endTime": "2025-05-20T09:45:00.000Z",
+    "room": "Hall A",
+    "description": "Learn modern React patterns for building large-scale applications."
+  },
+  {
+    "id": "s2",
+    "title": "TypeScript Tips for Pros",
+    "speaker": "Harish Patel",
+    "track": "Frontend",
+    "startTime": "2025-05-20T10:00:00.000Z",
+    "endTime": "2025-05-20T10:45:00.000Z",
+    "room": "Hall A",
+    "description": "Practical techniques to keep TypeScript codebases safe and maintainable."
+  },
+  {
+    "id": "s3",
+    "title": "Next.js App Router Deep Dive",
+    "speaker": "Mina Al-Khaled",
+    "track": "Frontend",
+    "startTime": "2025-05-20T14:00:00.000Z",
+    "endTime": "2025-05-20T14:45:00.000Z",
+    "room": "Hall B",
+    "description": "Server Components, streaming, and data fetching with the App Router."
+  },
+  {
+    "id": "s4",
+    "title": "Design Systems at Scale",
+    "speaker": "Jorge Castillo",
+    "track": "Frontend",
+    "startTime": "2025-05-20T17:30:00.000Z",
+    "endTime": "2025-05-20T18:15:00.000Z",
+    "room": "Hall C",
+    "description": "How to design, document, and ship scalable design systems."
+  },
+  {
+    "id": "s5",
+    "title": "CSS-in-JS with styled-components",
+    "speaker": "Sofia Martins",
+    "track": "Frontend",
+    "startTime": "2025-05-20T18:00:00.000Z",
+    "endTime": "2025-05-20T18:45:00.000Z",
+    "room": "Hall B",
+    "description": "Patterns, performance, and SSR with styled-components."
+  },
+  {
+    "id": "s6",
+    "title": "Async Architectures with Node",
+    "speaker": "Tomasz Nowak",
+    "track": "Backend",
+    "startTime": "2025-05-20T09:00:00.000Z",
+    "endTime": "2025-05-20T09:45:00.000Z",
+    "room": "Room 201",
+    "description": "A tour of event-driven and message-based backends."
+  },
+  {
+    "id": "s7",
+    "title": "Designing RESTful APIs",
+    "speaker": "Grace Li",
+    "track": "Backend",
+    "startTime": "2025-05-20T10:00:00.000Z",
+    "endTime": "2025-05-20T10:45:00.000Z",
+    "room": "Room 201",
+    "description": "Resource modeling, pagination, versioning, and error handling."
+  },
+  {
+    "id": "s8",
+    "title": "GraphQL Federation Basics",
+    "speaker": "Arman Petrosyan",
+    "track": "Backend",
+    "startTime": "2025-05-20T14:00:00.000Z",
+    "endTime": "2025-05-20T14:45:00.000Z",
+    "room": "Room 202",
+    "description": "When and how to federate a GraphQL schema."
+  },
+  {
+    "id": "s9",
+    "title": "Caching Strategies that Work",
+    "speaker": "Julia Novak",
+    "track": "Backend",
+    "startTime": "2025-05-20T13:00:00.000Z",
+    "endTime": "2025-05-20T13:45:00.000Z",
+    "room": "Room 203",
+    "description": "CDN, application caching, and cache invalidation patterns."
+  },
+  {
+    "id": "s10",
+    "title": "Secure Auth with OAuth2/OIDC",
+    "speaker": "Rafael Mendes",
+    "track": "Backend",
+    "startTime": "2025-05-20T18:00:00.000Z",
+    "endTime": "2025-05-20T18:45:00.000Z",
+    "room": "Room 203",
+    "description": "Implementing secure authentication and authorization flows."
+  },
+  {
+    "id": "s11",
+    "title": "Kubernetes 101",
+    "speaker": "Priya Singh",
+    "track": "DevOps",
+    "startTime": "2025-05-20T09:00:00.000Z",
+    "endTime": "2025-05-20T09:45:00.000Z",
+    "room": "Room 301",
+    "description": "Fundamentals of Kubernetes for application developers."
+  },
+  {
+    "id": "s12",
+    "title": "CI/CD for Monorepos",
+    "speaker": "Evan Brooks",
+    "track": "DevOps",
+    "startTime": "2025-05-20T10:00:00.000Z",
+    "endTime": "2025-05-20T10:45:00.000Z",
+    "room": "Room 301",
+    "description": "Scalable pipelines and caching strategies for monorepos."
+  },
+  {
+    "id": "s13",
+    "title": "Observability Beyond Logs",
+    "speaker": "Nadia Ahmed",
+    "track": "DevOps",
+    "startTime": "2025-05-20T14:00:00.000Z",
+    "endTime": "2025-05-20T14:45:00.000Z",
+    "room": "Room 302",
+    "description": "Metrics, traces, SLOs, and practical alerting strategies."
+  },
+  {
+    "id": "s14",
+    "title": "Cost-Efficient Cloud",
+    "speaker": "Marco Rossi",
+    "track": "DevOps",
+    "startTime": "2025-05-20T13:00:00.000Z",
+    "endTime": "2025-05-20T13:45:00.000Z",
+    "room": "Room 303",
+    "description": "Techniques to reduce cloud bills without sacrificing reliability."
+  },
+  {
+    "id": "s15",
+    "title": "Blue-Green & Canary",
+    "speaker": "Chloe Dupont",
+    "track": "DevOps",
+    "startTime": "2025-05-20T18:00:00.000Z",
+    "endTime": "2025-05-20T18:45:00.000Z",
+    "room": "Room 303",
+    "description": "Progressive delivery strategies with real examples."
+  },
+  {
+    "id": "s16",
+    "title": "Intro to Transformers",
+    "speaker": "Wei Zhang",
+    "track": "AI",
+    "startTime": "2025-05-20T09:00:00.000Z",
+    "endTime": "2025-05-20T09:45:00.000Z",
+    "room": "Hall D",
+    "description": "Foundations of transformer architectures and attention."
+  },
+  {
+    "id": "s17",
+    "title": "LLM Prompt Engineering",
+    "speaker": "Ana García",
+    "track": "AI",
+    "startTime": "2025-05-20T10:00:00.000Z",
+    "endTime": "2025-05-20T10:45:00.000Z",
+    "room": "Hall D",
+    "description": "Prompt patterns for reliability and guardrails."
+  },
+  {
+    "id": "s18",
+    "title": "Vector Databases in Practice",
+    "speaker": "Kenji Tanaka",
+    "track": "AI",
+    "startTime": "2025-05-20T14:00:00.000Z",
+    "endTime": "2025-05-20T14:45:00.000Z",
+    "room": "Hall E",
+    "description": "Indexing, filtering, and hybrid search trade-offs."
+  },
+  {
+    "id": "s19",
+    "title": "Responsible AI Basics",
+    "speaker": "Amara Ndlovu",
+    "track": "AI",
+    "startTime": "2025-05-20T13:00:00.000Z",
+    "endTime": "2025-05-20T13:45:00.000Z",
+    "room": "Hall E",
+    "description": "Bias, transparency, and evaluation practices."
+  },
+  {
+    "id": "s20",
+    "title": "Deploying LLM Apps",
+    "speaker": "Robert King",
+    "track": "AI",
+    "startTime": "2025-05-20T18:00:00.000Z",
+    "endTime": "2025-05-20T18:45:00.000Z",
+    "room": "Hall E",
+    "description": "From prototype to production for LLM-backed services."
+  }
+]
