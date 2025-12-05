@@ -1,6 +1,12 @@
 Conference Sessions Planner
 
+Repo: https://github.com/Adam-Jab/confplanner
+
 ## Getting Started
+
+Prerequisite:
+
+- Node.js 20.9+ (Next.js 16 requires Node 20)
 
 Install and start:
 

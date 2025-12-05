@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, Fragment } from "react";
 import styled from "styled-components";
 import type { Session, TimeOfDay } from "@/types/session";
 import { getTimeOfDay } from "@/types/session";
 import { formatTimeRangeUTC } from "@/lib/format";
+import { Listbox, Transition } from "@headlessui/react";
 
 type Props = {
   initialSessions: Session[];
@@ -42,20 +43,57 @@ const Input = styled.input`
   color: black;
 `;
 
-const Select = styled.select`
-  padding: 10px 12px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  background: #fff;
-  color: black;
+const SelectRoot = styled.div`
+  position: relative;
 `;
 
-const Option = styled.option`
+const SelectButton = styled(Listbox.Button)`
+  width: 100%;
   padding: 10px 12px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   background: #fff;
   color: black;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.4;
+`;
+
+const Options = styled(Listbox.Options)`
+  position: absolute;
+  z-index: 20;
+  margin-top: 6px;
+  max-height: 260px;
+  overflow: auto;
+  width: 100%;
+  background: #fff;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-size: 16px; /* readable on mobile */
+  li,
+  button,
+  div {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+`;
+
+const OptionButton = styled.button<{ $active?: boolean }>`
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: none;
+  background: ${({ $active }) => ($active ? "#eef2ff" : "transparent")};
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.4;
 `;
 
 const Grid = styled.ul`
@@ -161,30 +199,55 @@ export default function SessionList({ initialSessions }: Props) {
           onChange={(e) => setQuery(e.target.value)}
           aria-label="Search sessions"
         />
-        <Select
-          value={track}
-          onChange={(e) => setTrack(e.target.value)}
-          aria-label="Filter by track"
-        >
-          {tracks.map((track) => {
-            const label = track === "All" ? "All tracks" : track;
-            return (
-              <Option key={track} value={track}>
-                {label}
-              </Option>
-            );
-          })}
-        </Select>
-        <Select
-          value={timeOfDay}
-          onChange={(e) => setTimeOfDay(e.target.value as any)}
-          aria-label="Filter by time of day"
-        >
-          <option value="All">{"All times"}</option>
-          <option value="Morning">{"Morning"}</option>
-          <option value="Afternoon">{"Afternoon"}</option>
-          <option value="Evening">{"Evening"}</option>
-        </Select>
+        <SelectRoot>
+          <Listbox value={track} onChange={(v: string) => setTrack(v)}>
+            {({ open }: { open: boolean }) => (
+              <>
+                <SelectButton aria-label="Filter by track">
+                  {track === "All" ? "All tracks" : track}
+                </SelectButton>
+                <Transition as={Fragment} show={open}>
+                  <Options as="ul" role="listbox">
+                    {tracks.map((t) => (
+                      <Listbox.Option key={t} value={t} as="li">
+                        {({ active }: { active: boolean }) => (
+                          <OptionButton $active={active} type="button">
+                            {t === "All" ? "All tracks" : t}
+                          </OptionButton>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Options>
+                </Transition>
+              </>
+            )}
+          </Listbox>
+        </SelectRoot>
+
+        <SelectRoot>
+          <Listbox value={timeOfDay} onChange={(v: TimeOfDay | "All") => setTimeOfDay(v)}>
+            {({ open }: { open: boolean }) => (
+              <>
+                <SelectButton aria-label="Filter by time of day">
+                  {timeOfDay === "All" ? "All times" : timeOfDay}
+                </SelectButton>
+                <Transition as={Fragment} show={open}>
+                  <Options as="ul" role="listbox">
+                    {["All", "Morning", "Afternoon", "Evening"].map((t) => (
+                      <Listbox.Option key={t} value={t as any} as="li">
+                        {({ active }: { active: boolean }) => (
+                          <OptionButton $active={active} type="button">
+                            {t === "All" ? "All times" : t}
+                          </OptionButton>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Options>
+                </Transition>
+              </>
+            )}
+          </Listbox>
+        </SelectRoot>
       </Controls>
 
       <ActionsRow>
